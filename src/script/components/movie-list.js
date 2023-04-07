@@ -19,6 +19,7 @@ class movieList extends HTMLElement {
             movieItemElement.movies = movies;
             this.shadowDOM.appendChild(movieItemElement);
         });
+
     }
 
     renderError(message) {
