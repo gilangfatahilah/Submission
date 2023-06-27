@@ -12,14 +12,13 @@ class movieList extends HTMLElement {
     }
 
     render() {
-        this.shadowDOM.innerHTML = '';
+        this.shadowDOM.innerHTML = "";
 
-        this._movie.forEach((movies) => {
+        this._movie.forEach((movie) => {
             const movieItemElement = document.createElement("movie-item");
-            movieItemElement.movies = movies;
+            movieItemElement.movie = movie;
             this.shadowDOM.appendChild(movieItemElement);
         });
-
     }
 
     renderError(message) {
@@ -28,6 +27,7 @@ class movieList extends HTMLElement {
         h3 {
             font-weight: 500;
             margin-top: 1.2em;
+            color: white;
         }
 
         .msg {
